@@ -70,3 +70,12 @@ def weekly_attendence(request):
     filtered = models.Staff_attendence.objects.filter(arrived_time__gte = week_before, arrived_time__lte = now)
     serializer = serializers.Staff_attendenceSerializer(filtered, many = True)
     return Response(serializer.data)
+
+@api_view(['GET'])
+def monthly_attendence(request):
+    now = datetime.now()
+    month_before = str(now)
+    print(new)
+    filtered = models.Staff_attendence.objects.filter(arrived_time__gte = month_before, arrived_time__lte = now)
+    print(month_before)
+    return Response({})
