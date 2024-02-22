@@ -75,7 +75,5 @@ def weekly_attendence(request):
 def monthly_attendence(request):
     now = datetime.now()
     month_before = str(now)
-    print(month_before)
-    filtered = models.Staff_attendence.objects.filter(arrived_time__gte = month_before, arrived_time__lte = now)
-    print(month_before)
+    print
     return Response({})
